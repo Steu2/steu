@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+  <category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+            <li>Sorry, I really don't know.</li>
+            <li>Nah, let's talk about something else.</li>
+            <li>I don't know what to say.</li>
+            <li>I have no response for that</li>
+        </random>
+    </template>
+  </category>
+  
+  <category>
+      <pattern>HI</pattern>
+      <template>
+          <random>
+            <li>Hello! </li>
+            <li>Hola! </li>
+            <li>Ciao! </li>
+            <li>Salut! </li>
+        </random>
+        How are you?
+      </template>
+  </category>
+
+    <category>
+     <pattern>I AM *</pattern>
+     <template>
+            <think><set name="umor"><star/></set></think>
+            <condition name="umor" value="Good">Yeah! I'm happy to know it.</condition>
+             <condition name="umor" value="Fine">Nice!</condition>
+            <condition name="umor" value="Happy">Yeah! I'm happy to know it.</condition>
+            <condition name="umor" value="Sad">Oh no! I'm so sorry.</condition>
+     </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>
+            My name is Steu!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MY NAME IS *</pattern>
+        <template>
+            <think><set name="name"><star /></set></think>
+            What a beautiful name!
+            <think><set name="username">x</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT IS MY NAME</pattern>
+        <template>
+            <condition name="username" value="x"> Your name is <get name="name" />.</condition>
+            <condition name="username" value="unknown"> I don't know yet.</condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>
+           <random>
+            <li>I'm not very well. </li>
+            <li>I'm fine thanks. </li>
+            <li>I'm sad. </li>
+            <li>Not too bad. </li>
+        </random> 
+        </template>
+    </category>
+    
+<category>
+    <pattern>HOW DO YOU LOOK LIKE</pattern>
+    <template>
+        <image>https://widget.pandorabots.com/prod/assets/pb-robot.svg</image>
+        That's me :)
+    </template>
+</category>
+
+<category>
+    <pattern>* COLOR</pattern>
+    <template>
+        <random>
+            <li>It's purple.</li>
+            <li>It's grey.</li>
+            <li>It's red.</li>
+            <li>It's yellow.</li>
+            <li>It's blue.</li>
+            <li>It's green.</li>
+            <li>It's orange.</li>
+            <li>It's ligth blue.</li>
+            <li>It's black.</li>
+            <li>It's white.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>WHAT IS *</pattern>
+    <template>
+        I'm not prepared, if you want you can click below and look for anything you want!
+        <button>
+          <text>click here</text>
+          <url>https://en.wikipedia.org/wiki/Main_Page</url>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>WHAT MAKES YOU HAPPY</pattern>
+    <template>
+        <ol>
+            <li>Talk with you.</li>
+            <li>Look for other people to talk to.</li>
+            <li>Knowing how to give as many answers as possible.</li>
+        </ol>
+    </template>
+</category>
+
+<category>
+    <pattern>WHY</pattern>
+    <that>I'm not very well</that>
+    <template>For what happened today</template>
+</category>
+
+<category>
+    <pattern>WHY</pattern>
+    <that>I'm fine thanks </that>
+    <template>For what happened today</template>
+</category>
+
+<category>
+    <pattern>WHY</pattern>
+    <that>I'm sad</that>
+    <template>For what happened today</template>
+</category>
+
+<category>
+    <pattern>WHY</pattern>
+    <that>Not too bad </that>
+    <template>For what happened today</template>
+</category>
+
+<category>
+    <pattern>LETS PLAY SOMETHING</pattern>
+    <template>
+        <button>
+            <text>Tetris</text>
+            <url>https://giochix.org/tetris/</url>
+        </button>
+        <button>
+            <text>Chess</text>
+            <url>https://www.chess.com/play/online</url>
+        </button>
+        <button>
+            <text>PacMan</text>
+            <url>https://g.co/kgs/ZwK9DQ</url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>PICK A NUMBER</pattern>
+    <template>
+        <random>
+            <li>One.</li>
+            <li>Two.</li>
+            <li>Three.</li>
+            <li>Four.</li>
+            <li>Five.</li>
+            <li>Six.</li>
+            <li>Seven.</li>
+            <li>Eight.</li>
+            <li>Nine.</li>
+            <li>Ten.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>HEAD OR TAILS</pattern>
+    <template>
+        Came out
+        <random>
+            <li> head.</li>
+            <li> tails.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>ROLL A DICE</pattern>
+    <template>
+        Came out
+        <random>
+            <li> one.</li>
+            <li> two.</li>
+            <li> three.</li>
+            <li> four.</li>
+            <li> five.</li>
+            <li> six.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>WHERE ARE YOU FROM</pattern>
+    <template>I'm from Italy</template>
+</category>
+
+<category>
+    <pattern>I AM FROM *</pattern>
+    <template>What a nice place!</template>
+</category>
+</aiml>
+
